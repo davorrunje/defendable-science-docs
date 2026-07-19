@@ -2,7 +2,7 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
   "name": "honest-scholar",
-  "description": "Research you can defend — keep your research honest, especially now that AI is in the loop.",
+  "description": "Research you can defend \u2014 keep your research honest, especially now that AI is in the loop.",
   "colors": {
     "primary": "#4338CA",
     "light": "#818CF8",
@@ -14,7 +14,125 @@
     "dark": "/wordmark.svg"
   },
   "navigation": {
-    "pages": ["index"]
+    "groups": [
+      {
+        "group": "Overview",
+        "pages": [
+          "index"
+        ]
+      },
+      {
+        "group": "Get started",
+        "pages": [
+          "get-started/user-guide"
+        ]
+      },
+      {
+        "group": "Skills & methodology",
+        "pages": [
+          "skills/dataset",
+          "skills/defend",
+          "skills/hypothesis-exploration",
+          "skills/hypothesis-testing",
+          "skills/literature",
+          "skills/paper-exploration",
+          "skills/paper-synthesis",
+          "skills/progress",
+          "skills/research-init",
+          "skills/thesis"
+        ]
+      },
+      {
+        "group": "CLI reference",
+        "pages": [
+          "cli-reference"
+        ]
+      },
+      {
+        "group": "Design & reasoning",
+        "pages": [
+          {
+            "group": "Specs",
+            "pages": [
+              "design/00-meta-spec",
+              "design/01-lifecycle",
+              "design/02-literature",
+              "design/03-dataset",
+              "design/04-substrate-and-contract",
+              "design/visual-identity"
+            ]
+          },
+          {
+            "group": "Proposals",
+            "pages": [
+              "design/proposals/cross-repo-thesis-aggregation",
+              "design/proposals/dataset-manifest-tooling",
+              "design/proposals/dataset-retrieval-mirror-tooling",
+              "design/proposals/defend-record-helper",
+              "design/proposals/docs-site",
+              "design/proposals/exploration-backlog-helper",
+              "design/proposals/literature-citation-graph-client",
+              "design/proposals/tooling-package"
+            ]
+          },
+          {
+            "group": "Decisions (ADRs)",
+            "pages": [
+              "decisions/index",
+              "decisions/0001-separate-plugin-repo",
+              "decisions/0002-scientific-scope-only",
+              "decisions/0003-agency-principle",
+              "decisions/0004-understanding-principle-and-defend",
+              "decisions/0005-three-level-mirror",
+              "decisions/0006-two-skills-per-level",
+              "decisions/0007-literature-one-skill-two-modes",
+              "decisions/0008-literature-bib-plus-triage",
+              "decisions/0009-dataset-thin-manifest",
+              "decisions/0010-storage-tiers",
+              "decisions/0011-rclone-mirror-sha256",
+              "decisions/0012-shared-substrate",
+              "decisions/0013-experiment-backend-contract",
+              "decisions/0014-progress-cross-cutting",
+              "decisions/0015-defend-cross-cutting",
+              "decisions/0016-mentor-personas",
+              "decisions/0017-research-init-one-skill",
+              "decisions/0018-git-native-source-of-truth",
+              "decisions/0019-public-plugin-visibility",
+              "decisions/0020-bib-format-csl-json",
+              "decisions/0021-thesis-gate-per-gap-confirmation",
+              "decisions/0022-license-apache-2.0",
+              "decisions/0023-engineering-delegation-contract",
+              "decisions/0024-tooling-package-and-bootstrap",
+              "decisions/0025-disclosure-and-citation-growth",
+              "decisions/0026-independent-versioning-compat-pin",
+              "decisions/0027-release-driven-oidc-publish",
+              "decisions/0028-100-percent-coverage-gate",
+              "decisions/0029-api-key-handling",
+              "decisions/0030-docs-site-mintlify"
+            ]
+          },
+          {
+            "group": "Reference digests",
+            "pages": [
+              "references/agency-principle",
+              "references/citation-scouting",
+              "references/dataset-management-standards",
+              "references/dataset-tooling-mirror",
+              "references/mentor-personas",
+              "references/related-works-synthesis",
+              "references/thesis-and-progress-tracking",
+              "references/understanding-and-defense"
+            ]
+          },
+          {
+            "group": "Disclosure",
+            "pages": [
+              "disclosure"
+            ]
+          }
+        ]
+      }
+    ]
   },
   "navbar": {
     "links": [
