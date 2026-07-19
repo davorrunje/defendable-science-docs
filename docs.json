@@ -1,0 +1,32 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "honest-scholar",
+  "description": "Research you can defend — keep your research honest, especially now that AI is in the loop.",
+  "colors": {
+    "primary": "#4338CA",
+    "light": "#818CF8",
+    "dark": "#3730A3"
+  },
+  "favicon": "/wordmark.svg",
+  "logo": {
+    "light": "/wordmark.svg",
+    "dark": "/wordmark.svg"
+  },
+  "navigation": {
+    "pages": ["index"]
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "GitHub",
+        "href": "https://github.com/davorrunje/honest-scholar"
+      }
+    ]
+  },
+  "footer": {
+    "socials": {
+      "github": "https://github.com/davorrunje/honest-scholar"
+    }
+  }
+}
