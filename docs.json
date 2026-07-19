@@ -4,14 +4,19 @@
   "name": "honest-scholar",
   "description": "Research you can defend \u2014 keep your research honest, especially now that AI is in the loop.",
   "colors": {
-    "primary": "#4338CA",
-    "light": "#818CF8",
-    "dark": "#3730A3"
+    "primary": "#241852",
+    "light": "#4a3a8f",
+    "dark": "#160f33"
   },
-  "favicon": "/wordmark.svg",
+  "favicon": "/icon-mark.svg",
   "logo": {
-    "light": "/wordmark.svg",
-    "dark": "/wordmark.svg"
+    "light": "/wordmark-lockup-light.svg",
+    "dark": "/wordmark-lockup-dark.svg"
+  },
+  "seo": {
+    "metatags": {
+      "og:image": "/social-preview.svg"
+    }
   },
   "navigation": {
     "groups": [

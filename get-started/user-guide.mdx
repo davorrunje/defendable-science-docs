@@ -3,8 +3,6 @@ title: "honest-scholar — User Guide"
 description: "A hands-on guide for a researcher meeting honest-scholar for the first time. It walks you from install to a signed finding to a submitted paper, using one…"
 ---
 
-&lt;!-- honest-scholar user guide -->
-
 # honest-scholar — User Guide
 
 A hands-on guide for a researcher meeting `honest-scholar` for the first time. It walks
@@ -331,8 +329,8 @@ the throttling that otherwise stalls citation-graph work.
 
 | Key | Service | What it buys | How to obtain |
 |---|---|---|---|
-| `S2_API_KEY` | Semantic Scholar | Raises the rate limit far above the shared keyless pool (which throttles hard). | <https://www.semanticscholar.org/product/api#api-key> |
-| `OPENALEX_MAILTO` | OpenAlex | Joins the "polite pool" (a contact email) for faster, more reliable responses. | <https://docs.openalex.org/how-to-use-the-api/rate-limits-and-authentication> |
+| `S2_API_KEY` | Semantic Scholar | Raises the rate limit far above the shared keyless pool (which throttles hard). | [https://www.semanticscholar.org/product/api#api-key](https://www.semanticscholar.org/product/api#api-key) |
+| `OPENALEX_MAILTO` | OpenAlex | Joins the "polite pool" (a contact email) for faster, more reliable responses. | [https://docs.openalex.org/how-to-use-the-api/rate-limits-and-authentication](https://docs.openalex.org/how-to-use-the-api/rate-limits-and-authentication) |
 | `RCLONE_CONFIG_<REMOTE>_*` | Private dataset mirror | rclone remote credentials, handed to rclone as scoped env vars (no config file needed). | Per your rclone remote (see `rclone config`). |
 
 honest-scholar keeps keys in a **CLI-managed JSON store** at
