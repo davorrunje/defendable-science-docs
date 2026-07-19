@@ -26,7 +26,7 @@ and never re-derive the workflow, or its rigor, per project. Concretely, it:
 Because AI is in the loop, it is also built so the science stays honestly *yours*
 and defensible (see [The mechanics of honesty](#the-mechanics-of-honesty)).
 
-> **New here?** Start with the **[User Guide](/get-started/user-guide)**.
+> **New here?** Read the docs at **[honest-scholar.science](https://honest-scholar.science/)** — start with the **[User Guide](/get-started/user-guide)**.
 >
 > **Status: pre-release, actively developed.** The design is complete and recorded
 > (see [Design & reasoning](#design--reasoning)); the skills and their supporting
@@ -121,9 +121,9 @@ consuming repo's `.claude/settings.json`:
 }
 ```
 
-By default this tracks the plugin's `main`. Once a plugin release is tagged you can
-pin it by adding a `"ref": "<tag>"` inside the marketplace `source` for a fixed
-version. See [`STATUS.md`](https://github.com/davorrunje/honest-scholar/blob/main/STATUS.md) for the current state.
+To pin a fixed release, add `"ref": "v0.1.0"` inside the marketplace `source`;
+omit it to track the plugin's `main`. See [`STATUS.md`](https://github.com/davorrunje/honest-scholar/blob/main/STATUS.md) for the current
+state.
 
 ## Design & reasoning
 
