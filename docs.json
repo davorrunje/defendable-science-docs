@@ -1,17 +1,17 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "honest-scholar",
+  "name": "Honest Scholar",
   "description": "Research you can defend \u2014 keep your research honest, especially now that AI is in the loop.",
   "colors": {
-    "primary": "#241852",
-    "light": "#4a3a8f",
-    "dark": "#160f33"
+    "primary": "#ff6558",
+    "light": "#ff8a7d",
+    "dark": "#c9402e"
   },
   "favicon": "/icon-mark.svg",
   "logo": {
-    "light": "/wordmark-lockup-light.svg",
-    "dark": "/wordmark-lockup-dark.svg"
+    "light": "/nav-logo-light.svg",
+    "dark": "/nav-logo-dark.svg"
   },
   "seo": {
     "metatags": {
