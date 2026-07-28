@@ -42,7 +42,7 @@ same claim.
 All under `docs/research/<paper>/hypotheses/<YYYY-MM-DD-slug>/`, produced **in
 order**. Each carries a status frontmatter block that feeds
 [`progress`](/skills/progress). Templates live in
-[`../../resources/templates/`](https://github.com/davorrunje/honest-scholar/tree/main/resources/templates).
+[`../../resources/templates/`](https://github.com/davorrunje/defendable-science/tree/main/resources/templates).
 
 1. **`hypothesis.md`** — the free-form claim, carried over from the promoted
    backlog item. State the claim, why it matters, and what a confirming vs.
@@ -74,10 +74,10 @@ order**. Each carries a status frontmatter block that feeds
    > confirmatory.
 
 3. **`design.md` / `plan.md`** — *the engineering, delegated.* Hand off to the
-   engineering backend bound in `.honest-scholar/config.yml` (`engineering_backend:`)
+   engineering backend bound in `.defendable-science/config.yml` (`engineering_backend:`)
    via the engineering-delegation contract: `design` → `plan` → `implement`. Store
    the design and plan under this hypothesis folder (`design.md`, `plan.md`);
-   `implement` builds the experiment harness/code. `honest-scholar` does not design
+   `implement` builds the experiment harness/code. `defendable-science` does not design
    experiments, write plans, or implement — it composes with the engineering backend
    for all of that. The *experiment* backend's `run` (below) then executes the built
    harness to produce the runs.
@@ -102,7 +102,7 @@ discipline and the explore/confirm firewall (letting the results choose the test
 exactly what invalidates a confirmatory claim).
 
 Evidence flows through the **experiment-backend contract**
-([`../../resources/contracts/experiment-backend.md`](https://github.com/davorrunje/honest-scholar/blob/main/resources/contracts/experiment-backend.md)),
+([`../../resources/contracts/experiment-backend.md`](https://github.com/davorrunje/defendable-science/blob/main/resources/contracts/experiment-backend.md)),
 resolved from the `backend:` binding in `docs/research/papers.md`:
 
 | Capability | Use in this skill |
@@ -121,7 +121,7 @@ decide to re-run — the researcher does.
 Applied in `strategy.md` (chosen before outcomes) and enforced through
 `findings.md`. Every element is also a [`defend`](/skills/defend) `methodology`
 target — you must be able to explain *why*, not merely perform the ritual (checklists
-live in [`../../resources/rigor/`](https://github.com/davorrunje/honest-scholar/tree/main/resources/rigor); the *why* is grounded in
+live in [`../../resources/rigor/`](https://github.com/davorrunje/defendable-science/tree/main/resources/rigor); the *why* is grounded in
 [`../../resources/references/understanding-and-defense.md`](/references/understanding-and-defense)).
 
 - **Confirmatory vs. exploratory / preregistration** — fix the analysis before
@@ -182,9 +182,9 @@ live in [`../../resources/rigor/`](https://github.com/davorrunje/honest-scholar/
 ## Commit attribution
 
 When you commit artifacts produced by this skill, add these git trailers —
-discovery + provenance (see [`../../resources/commit-attribution.md`](https://github.com/davorrunje/honest-scholar/blob/main/resources/commit-attribution.md)):
+discovery + provenance (see [`../../resources/commit-attribution.md`](https://github.com/davorrunje/defendable-science/blob/main/resources/commit-attribution.md)):
 
 ```
-Generated-with: honest-scholar (https://github.com/davorrunje/honest-scholar)
-HonestScholar-Skill: hypothesis-testing
+Generated-with: defendable-science (https://github.com/davorrunje/defendable-science)
+DefendableScience-Skill: hypothesis-testing
 ```

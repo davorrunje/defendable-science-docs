@@ -1,13 +1,13 @@
 ---
 title: "CLI reference"
-description: "The honest-scholar command tree, generated from the Typer app."
+description: "The defendable-science command tree, generated from the Typer app."
 ---
 
-Supporting tooling for the honest-scholar research-workflow plugin.
+Supporting tooling for the defendable-science research-workflow plugin.
 
-Every command emits JSON on success and a clear, non-zero exit with an actionable message on failure. Run `honest-scholar --version` to print the installed version. This page is generated from the Typer app on every build, so it always matches the released CLI.
+Every command emits JSON on success and a clear, non-zero exit with an actionable message on failure. Run `defendable-science --version` to print the installed version. This page is generated from the Typer app on every build, so it always matches the released CLI.
 
-## `honest-scholar doctor`
+## `defendable-science doctor`
 
 Report the local environment: Python, ``uv`` and ``rclone``.
 
@@ -15,31 +15,31 @@ Prints a short diagnostic report. Missing optional tools (``uv``,
 ``rclone``) are reported, not treated as failures. Always exits 0.
 
 ```text
-honest-scholar doctor
+defendable-science doctor
 ```
 
-## `honest-scholar literature`
+## `defendable-science literature`
 
 Citation-graph and metadata tools.
 
-### `honest-scholar literature resolve`
+### `defendable-science literature resolve`
 
 Resolve an identifier (DOI, arXiv id, OpenAlex/S2 id) to a canonical work.
 
 ```text
-honest-scholar literature resolve IDENTIFIER
+defendable-science literature resolve IDENTIFIER
 ```
 
 | Argument | Required | Description |
 |---|---|---|
 | `IDENTIFIER` | yes | — |
 
-### `honest-scholar literature cites`
+### `defendable-science literature cites`
 
 List works that cite the given work (JSON array).
 
 ```text
-honest-scholar literature cites [OPTIONS] IDENTIFIER
+defendable-science literature cites [OPTIONS] IDENTIFIER
 ```
 
 | Argument | Required | Description |
@@ -50,24 +50,24 @@ honest-scholar literature cites [OPTIONS] IDENTIFIER
 |---|---|---|
 | `--max` | `0` | Cap on rows. |
 
-### `honest-scholar literature refs`
+### `defendable-science literature refs`
 
 List the backward references (OpenAlex ids) of the given work.
 
 ```text
-honest-scholar literature refs IDENTIFIER
+defendable-science literature refs IDENTIFIER
 ```
 
 | Argument | Required | Description |
 |---|---|---|
 | `IDENTIFIER` | yes | — |
 
-### `honest-scholar literature enrich`
+### `defendable-science literature enrich`
 
 Enrich one or more works with their metadata bundle (JSON array).
 
 ```text
-honest-scholar literature enrich [OPTIONS] IDENTIFIERS
+defendable-science literature enrich [OPTIONS] IDENTIFIERS
 ```
 
 | Argument | Required | Description |
@@ -78,12 +78,12 @@ honest-scholar literature enrich [OPTIONS] IDENTIFIERS
 |---|---|---|
 | `--context` | `false` | — |
 
-### `honest-scholar literature neighbors`
+### `defendable-science literature neighbors`
 
 List co-citation / bibliographic-coupling neighbours of the given work.
 
 ```text
-honest-scholar literature neighbors [OPTIONS] IDENTIFIER
+defendable-science literature neighbors [OPTIONS] IDENTIFIER
 ```
 
 | Argument | Required | Description |
@@ -95,11 +95,11 @@ honest-scholar literature neighbors [OPTIONS] IDENTIFIER
 | `--kind` | `both` | cocite \| couple \| both. |
 | `--top` | `20` | — |
 
-## `honest-scholar dataset`
+## `defendable-science dataset`
 
 Dataset manifest, retrieval and mirroring.
 
-### `honest-scholar dataset validate`
+### `defendable-science dataset validate`
 
 Validate a ``datasets.yml`` manifest (the register/audit gate).
 
@@ -107,14 +107,14 @@ Prints a JSON report ``{ok, errors, warnings}`` and exits non-zero on any
 hard error.
 
 ```text
-honest-scholar dataset validate [MANIFEST]
+defendable-science dataset validate [MANIFEST]
 ```
 
 | Argument | Required | Description |
 |---|---|---|
 | `MANIFEST` | no | Path to the manifest to validate. |
 
-### `honest-scholar dataset ingest`
+### `defendable-science dataset ingest`
 
 Ingest a published Croissant JSON-LD file to bootstrap a draft entry.
 
@@ -122,19 +122,19 @@ Prints the draft registry entry as JSON, with the human-owned fields it could
 not fill listed under ``_needs_human`` (the caller confirms them on register).
 
 ```text
-honest-scholar dataset ingest CROISSANT
+defendable-science dataset ingest CROISSANT
 ```
 
 | Argument | Required | Description |
 |---|---|---|
 | `CROISSANT` | yes | — |
 
-### `honest-scholar dataset emit`
+### `defendable-science dataset emit`
 
 Emit a Croissant JSON-LD document for a manifest entry (or all entries).
 
 ```text
-honest-scholar dataset emit [OPTIONS] [IDENTIFIER]
+defendable-science dataset emit [OPTIONS] [IDENTIFIER]
 ```
 
 | Argument | Required | Description |
@@ -146,12 +146,12 @@ honest-scholar dataset emit [OPTIONS] [IDENTIFIER]
 | `--all` | `false` | Emit every entry as a JSON array. |
 | `--manifest` | `datasets.yml` | Path to the manifest to read. |
 
-### `honest-scholar dataset fetch`
+### `defendable-science dataset fetch`
 
 Fetch a registered dataset through the resolution chain (pooch/rclone).
 
 ```text
-honest-scholar dataset fetch [OPTIONS] IDENTIFIER
+defendable-science dataset fetch [OPTIONS] IDENTIFIER
 ```
 
 | Argument | Required | Description |
@@ -162,12 +162,12 @@ honest-scholar dataset fetch [OPTIONS] IDENTIFIER
 |---|---|---|
 | `--manifest` | `datasets.yml` | Path to the manifest. |
 
-### `honest-scholar dataset verify`
+### `defendable-science dataset verify`
 
 Verify on-disk bytes against the manifest SHA-256 (offline).
 
 ```text
-honest-scholar dataset verify [OPTIONS] IDENTIFIER
+defendable-science dataset verify [OPTIONS] IDENTIFIER
 ```
 
 | Argument | Required | Description |
@@ -178,12 +178,12 @@ honest-scholar dataset verify [OPTIONS] IDENTIFIER
 |---|---|---|
 | `--manifest` | `datasets.yml` | Path to the manifest. |
 
-### `honest-scholar dataset mirror`
+### `defendable-science dataset mirror`
 
 Populate/refresh the private rclone mirror for a dataset.
 
 ```text
-honest-scholar dataset mirror [OPTIONS] IDENTIFIER
+defendable-science dataset mirror [OPTIONS] IDENTIFIER
 ```
 
 | Argument | Required | Description |
@@ -194,12 +194,12 @@ honest-scholar dataset mirror [OPTIONS] IDENTIFIER
 |---|---|---|
 | `--manifest` | `datasets.yml` | Path to the manifest. |
 
-### `honest-scholar dataset audit`
+### `defendable-science dataset audit`
 
 Audit fixity, mirror presence and manifest completeness.
 
 ```text
-honest-scholar dataset audit [OPTIONS] [IDENTIFIER]
+defendable-science dataset audit [OPTIONS] [IDENTIFIER]
 ```
 
 | Argument | Required | Description |
@@ -210,43 +210,43 @@ honest-scholar dataset audit [OPTIONS] [IDENTIFIER]
 |---|---|---|
 | `--manifest` | `datasets.yml` | Path to the manifest. |
 
-## `honest-scholar defend`
+## `defendable-science defend`
 
 Defensibility record helpers.
 
-### `honest-scholar defend record`
+### `defendable-science defend record`
 
-Record a ``defend`` examination: patch understanding + append the log.
+Record a ``defend``/``digest`` examination: patch understanding + log.
 
 Writes ``status.understanding`` into the artifact frontmatter and appends the
-outcome to the accountability log. Records observed facts only — never a
-verdict, score, or answer key.
+full evidentiary point record (ADR-0033) to the accountability log. Records
+observed facts only — never a verdict, score, or answer key.
 
 ```text
-honest-scholar defend record [OPTIONS]
+defendable-science defend record [OPTIONS]
 ```
 
 | Option | Default | Description |
 |---|---|---|
 | `--artifact` | — | Target markdown artifact. |
-| `--target` | — | claim \| cited-work \| methodology. |
-| `--gaps` | — | Observed gap facts, '\|\|'-separated. |
+| `--target` | — | claim \| cited-work \| methodology \| paper-comprehension. |
+| `--points` | — | Point records: a JSON-array file path, or '-' for stdin. |
 | `--signed-off-by` | — | — |
 | `--override` | `false` | — |
 | `--acks` | — | Per-gap sign-offs, 'gap::name\|\|…'. |
 | `--transcript` | — | Transcript file, or '-' for stdin. |
 | `--log-dir` | `docs/research/defend-log` | — |
 
-## `honest-scholar backlog`
+## `defendable-science backlog`
 
 Exploration backlog management.
 
-### `honest-scholar backlog park`
+### `defendable-science backlog park`
 
 Park a raw one-line idea as a ``parked`` backlog row.
 
 ```text
-honest-scholar backlog park [OPTIONS] ONE_LINE
+defendable-science backlog park [OPTIONS] ONE_LINE
 ```
 
 | Argument | Required | Description |
@@ -260,12 +260,12 @@ honest-scholar backlog park [OPTIONS] ONE_LINE
 | `--level` | `hypothesis` | hypothesis \| paper. |
 | `--id` | — | Explicit row id. |
 
-### `honest-scholar backlog add`
+### `defendable-science backlog add`
 
 Add a ``candidate`` row (realizes the ``generate`` verb).
 
 ```text
-honest-scholar backlog add [OPTIONS] ONE_LINE
+defendable-science backlog add [OPTIONS] ONE_LINE
 ```
 
 | Argument | Required | Description |
@@ -279,12 +279,12 @@ honest-scholar backlog add [OPTIONS] ONE_LINE
 | `--level` | `hypothesis` | hypothesis \| paper. |
 | `--id` | — | Explicit row id. |
 
-### `honest-scholar backlog list`
+### `defendable-science backlog list`
 
 List backlog rows as JSON (read-only), optionally filtered by status.
 
 ```text
-honest-scholar backlog list [OPTIONS]
+defendable-science backlog list [OPTIONS]
 ```
 
 | Option | Default | Description |
@@ -293,12 +293,12 @@ honest-scholar backlog list [OPTIONS]
 | `--level` | `hypothesis` | hypothesis \| paper. |
 | `--status` | — | Filter by status. |
 
-### `honest-scholar backlog rank`
+### `defendable-science backlog rank`
 
 Score a row and set it ``ranked`` (advises; never selects).
 
 ```text
-honest-scholar backlog rank [OPTIONS] ROW_ID
+defendable-science backlog rank [OPTIONS] ROW_ID
 ```
 
 | Argument | Required | Description |
@@ -314,7 +314,7 @@ honest-scholar backlog rank [OPTIONS] ROW_ID
 | `--interest` | — | — |
 | `--frame` | — | — |
 
-### `honest-scholar backlog promote`
+### `defendable-science backlog promote`
 
 Mark a ``ranked`` row ``promoted`` (an explicit human pick).
 
@@ -322,7 +322,7 @@ Flips the row's status and saves the backlog. Scaffolding the next-stage
 artifact is a follow-up step (``scaffold_hypothesis`` / ``scaffold_paper``).
 
 ```text
-honest-scholar backlog promote [OPTIONS] ROW_ID
+defendable-science backlog promote [OPTIONS] ROW_ID
 ```
 
 | Argument | Required | Description |
@@ -334,12 +334,12 @@ honest-scholar backlog promote [OPTIONS] ROW_ID
 | `--backlog` | `backlog.md` | Path to the backlog. |
 | `--level` | `hypothesis` | hypothesis \| paper. |
 
-### `honest-scholar backlog drop`
+### `defendable-science backlog drop`
 
 Retire a row as ``dropped`` with a recorded reason (never deletes it).
 
 ```text
-honest-scholar backlog drop [OPTIONS] ROW_ID
+defendable-science backlog drop [OPTIONS] ROW_ID
 ```
 
 | Argument | Required | Description |
@@ -352,11 +352,11 @@ honest-scholar backlog drop [OPTIONS] ROW_ID
 | `--backlog` | `backlog.md` | Path to the backlog. |
 | `--level` | `hypothesis` | hypothesis \| paper. |
 
-## `honest-scholar keys`
+## `defendable-science keys`
 
 Store, list and check API keys & credentials (ADR-0029).
 
-### `honest-scholar keys set`
+### `defendable-science keys set`
 
 Store a key. The value comes from **stdin or a hidden prompt**, never argv.
 
@@ -364,45 +364,45 @@ Piping a JSON object (``{"NAME": "value", ...}``) sets many at once. Unknown
 names warn but are still stored. No value is ever echoed.
 
 ```text
-honest-scholar keys set [NAME]
+defendable-science keys set [NAME]
 ```
 
 | Argument | Required | Description |
 |---|---|---|
 | `NAME` | no | Key name; omit only when piping a JSON object. |
 
-### `honest-scholar keys list`
+### `defendable-science keys list`
 
 List every known + stored key with its metadata and presence (no values).
 
 ```text
-honest-scholar keys list
+defendable-science keys list
 ```
 
-### `honest-scholar keys check`
+### `defendable-science keys check`
 
 Report presence/absence and source of each key as JSON (never a value).
 
 ```text
-honest-scholar keys check
+defendable-science keys check
 ```
 
-### `honest-scholar keys unset`
+### `defendable-science keys unset`
 
 Remove a key from the store (a no-op if it was not stored).
 
 ```text
-honest-scholar keys unset NAME
+defendable-science keys unset NAME
 ```
 
 | Argument | Required | Description |
 |---|---|---|
 | `NAME` | yes | Key name to remove from the store. |
 
-### `honest-scholar keys path`
+### `defendable-science keys path`
 
 Print the resolved key-store path.
 
 ```text
-honest-scholar keys path
+defendable-science keys path
 ```
