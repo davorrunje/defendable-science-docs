@@ -119,7 +119,8 @@
               "decisions/0032-keys-store-outside-repo-by-default",
               "decisions/0033-evidentiary-point-records",
               "decisions/0034-digest-skill",
-              "decisions/0035-rename-to-defendable-science"
+              "decisions/0035-rename-to-defendable-science",
+              "decisions/0036-automated-dependency-updates"
             ]
           },
           {
